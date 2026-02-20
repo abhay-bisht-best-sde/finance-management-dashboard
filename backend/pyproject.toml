@@ -1,0 +1,26 @@
+[project]
+name = "finance-manager-advisor"
+version = "0.1.0"
+description = "Manage your finances"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.121.2",
+    "uvicorn[standard]>=0.38.0",
+    "openai>=1.55.0",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "prisma>=0.15.0",
+]
+
+[tool.prisma]
+# Must match build.sh and main.py so Render runtime finds the query engine.
+binary_cache_dir = ".prisma"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.0.1",
+    "pytest-asyncio>=1.3.0",
+]

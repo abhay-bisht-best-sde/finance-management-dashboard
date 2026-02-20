@@ -1,0 +1,27 @@
+# ---- Python ----
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---- Prisma (VERY IMPORTANT) ----
+backend/app/prisma/generated/
+
+# ---- Env files ----
+.env
+
+# ---- OS / Editor ----
+.DS_Store
+.vscode/
+.idea/
+.cursor/
+
+# ---- Node (if frontend exists) ----
+node_modules/
+.next/
